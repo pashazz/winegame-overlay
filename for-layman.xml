@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<layman>
+<overlays>
+<overlay contact="pzinin@gmail.com" name="winegame" src="git://github.com/pashazz/winegame-overlay.git" type="git">
+  <link></link>
+  <description>Overlay for WineGame</description>
+</overlay>
+</overlays>
+</layman>

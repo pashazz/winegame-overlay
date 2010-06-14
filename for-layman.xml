@@ -2,7 +2,7 @@
 <layman>
 <overlays>
 <overlay contact="pzinin@gmail.com" name="winegame" src="git://github.com/pashazz/winegame-overlay.git" type="git">
-  <link></link>
+  <link>http://github.com/pashazz/winegame-overlay</link>
   <description>Overlay for WineGame</description>
 </overlay>
 </overlays>

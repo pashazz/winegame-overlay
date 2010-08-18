@@ -2,19 +2,23 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI="3"
-inherit qt4-r2 cmake-utils
+inherit eutils qt4-r2 cmake-utils
 LANGS="ru"
-SLOT="0"
-MY_P="${PN}-${PV/_/-}"
-DESCRIPTION="Qt4-based WINE managing utility - GUI"
+
+DESCRIPTION="Qt4-based WINE managing utility - Library"
 HOMEPAGE="http://winegame.googlecode.com"
+MY_P="${PN}-${PV/_/-}"
 SRC_URI="${HOMEPAGE}/files/${MY_P}.tar.gz"
 S=${WORKDIR}/${MY_P}
 KEYWORDS="~amd64 ~x86"
-LICENSE="GPL-3"
-DEPEND=">=x11-libs/qt-gui-4.6.0
-	=dev-libs/winestuff-${PV}"
-DOCS=(GAMETODO TODO README)
+LICENSE="LGPL-2.1"
+SLOT="0"
+DEPEND="dev-util/cmake
+	>=x11-libs/qt-sql-4.6.0
+	>=x11-libs/qt-core-4.6.0
+	app-emulation/winetricks
+	sys-fs/fuseiso"
+
 src_prepare() {
 	qt4-r2_src_prepare
 }
